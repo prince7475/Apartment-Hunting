@@ -1,0 +1,78 @@
+WRONG
+function apartmentHunting(blocks, reqs) {
+  let minDistanceToReqs = reqs.map((item) => getMinDistance(item,blocks))
+  let maxDistanceToAllReq = getMaxDistanceToAllReq(minDistanceToReqs, reqs, blocks)
+  return maxDistanceToAllReq.indexOf(Math.max(...maxDistanceToAllReq))
+}
+
+function getMinDistance(item, blocks){
+  let result = blocks.map((el) => Infinity
+  let currentClosest = Infinity
+  for(let i = 1; i < blocks.length; i++){
+    let currBlock = blocks[i]
+    if(currBlock[item]){
+      result[i] = 0
+      currentClosest = i
+    }else {
+      result[i] = Math.abs(currentClosest - i)
+    }
+  }
+  
+  for(let j = array.length - 2; j >= 0; j++){
+    let currBlock = blocks[i]
+    if(currBlock[item]){
+      currentClosest = 1
+    }else {
+      result[i] = Math.abs( result[i], Math.abs(currentClosest - i ))
+    }
+  }
+  return result
+}
+
+function getMaxDistanceToAllReq(nestArray,reqs, blocks){
+let maxDistance = []
+  for(let i = 0; i < blocks.length; i++){
+      let currMaxDistance = -Infinity
+      for(let j = 0; j < nestedArr.length; j++){
+          currMaxDistance = Math.max(currMaxDistance, nestedArr[j][i])
+      }
+      
+      maxDistance[i] = currMaxDistance
+  }
+  return maxDistance
+}
+
+
+
+const block = [
+{
+"gym": false,
+"school": true,
+"store": false,
+},
+{
+"gym": true,
+"school": false,
+"store": false,
+},
+{
+"gym": true,
+"school": true,
+"store": false,
+},
+{
+"gym": false,
+"school": true,
+"store": false,
+},
+{
+"gym": false,
+"school": true,
+"store": true,
+},
+]
+
+closest = 1
+
+[Infinity, 0, 0,1, 2 ]
+let items = ["gym","school","store"]
